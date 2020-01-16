@@ -85,7 +85,7 @@ function generateText(role, action){
         text = `Снят с 3 лвла админки`;
         break;
       case alert_roles[6]:
-        text = `Снят с поста хелпера`;
+        text = `Снят с 1 лвла админки`;
         break;
       case alert_roles[7]:
         text = `Снят с поста министра`;

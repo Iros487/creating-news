@@ -37,8 +37,8 @@ bot.on('guildMemberUpdate', async (oldMember, newMember) => {
   let different = compareRoles(oldMember.roles, newMember.roles);
   if(!alert_roles.includes(different[0])) return;
   let text = `${new Date().getDate()}.${new Date().getMonth() + 1}.${new Date().getFullYear()} | ${oldMember.displayName} | ${generateText(different[0], different[1])} | \`<@${oldMember.id}>\``;
-  let channel = oldMember.guild.channels.find(c => c.name == "creating-news-scottdale-info");
-  if(!channel) return console.log("Channel 'creating-news-scottdale-info' not found.");
+  let channel = oldMember.guild.channels.find(c => c.name == "bot-info-news");
+  if(!channel) return console.log("Channel 'bot-info-news' not found.");
   channel.send(text);
 });
 

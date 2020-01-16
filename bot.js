@@ -28,7 +28,7 @@ bot.on('message', async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0].slice(prefix.length);
   if(cmd == "ping"){
-    message.channel.send(`\`PING: ${Math.round(bot.ping)}ms. UPTIME: ${new Date().getTime() - uptime}.\``);
+    message.channel.send(`\`PING: ${bot.ping}ms. UPTIME: ${new Date().getTime() - uptime}.\``);
   }
 });
 

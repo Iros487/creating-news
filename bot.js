@@ -25,10 +25,10 @@ bot.on('message', async message => {
   if(message.author.bot) return;
   if(message.channel.type == "dm") return;
   if(!message.content.startsWith(prefix)) return;
+  if(guild.channel.id != "667404003214098444") return;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0].slice(prefix.length);
   if(cmd == "ping"){
-    if(guild.channel.id != "667404003214098444") return;
     message.channel.send(`\`PING: ${bot.ping}ms. UPTIME: ${new Date().getTime() - uptime}.\``);
   }
 });
